@@ -12,55 +12,126 @@
 	<header>
 		<h1>Food Delivery</h1>
 		<nav>
-			<a href="#home">Home</a>
-			<a href="#sushi">Sushi</a>
-			<a href="#burgers">Burgers</a>
-			<a href="#pizza">Pizza</a>
+			<a href="#home" class="tab-button" onclick="openTab('home')">Home</a>
+			<a href="#sushi" class="tab-button" onclick="openTab('sushi')">Sushi</a>
+			<a href="#burgers" class="tab-button" onclick="openTab('burgers')">Burgers</a>
+			<a href="#pizza" class="tab-button" onclick="openTab('pizza')">Pizza</a>
+			<a href="#cart" class="tab-button" onclick="openTab('cart')">Carrinho</a>
 		</nav>
 	</header>
 
-	<section id="home">
+	<div id="home" class="tab-content">
 		<h2>Bem-vindo ao Food Delivery!</h2>
 		<p>Escolha entre nossas deliciosas opções de comida.</p>
-	</section>
+	</div>
 
-	<section id="sushi">
+	<div id="sushi" class="tab-content">
 		<h2>Sushi</h2>
 		<div class="menu-item">
-			<img src="https://i0.wp.com/querofazersushi.com.br/wp-content/uploads/2020/02/sushi-pelo-mundo.png?resize=640%2C456" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 640px; height: 262px; margin: 0px; width: 368px;" alt="Sushi pelo mundo: 6 formas inusitadas de comer sushi - Comida Japonesa |  Blog Quero Fazer Sushi" jsname="kn3ccd" aria-hidden="false">
+			<img src="https://i0.wp.com/querofazersushi.com.br/wp-content/uploads/2020/02/sushi-pelo-mundo.png?resize=640%2C456" alt="Sushi Maki">
 			<h3>Sushi Maki</h3>
 			<p>Delicioso sushi com peixe fresco e arroz temperado.</p>
-			<button onclick="orderItem('Sushi Maki')">Pedir Agora</button>
+			<button onclick="orderItem('Sushi Maki', 20)">Adicionar ao Carrinho</button>
 		</div>
-		<!-- Adicione mais itens de sushi aqui -->
-	</section>
+		<div class="menu-item">
+			<img src="https://i0.wp.com/querofazersushi.com.br/wp-content/uploads/2020/02/sushi-pelo-mundo.png?resize=640%2C456" alt="Sushi Temaki">
+			<h3>Temaki</h3>
+			<p>Sushi enrolado em alga nori com recheio fresco.</p>
+			<button onclick="orderItem('Temaki', 22)">Adicionar ao Carrinho</button>
+		</div>
+		<div class="menu-item">
+			<img src="https://i0.wp.com/querofazersushi.com.br/wp-content/uploads/2020/02/sushi-pelo-mundo.png?resize=640%2C456" alt="Sushi Nigiri">
+			<h3>Sushi Nigiri</h3>
+			<p>Fatias de peixe fresco sobre arroz de sushi.</p>
+			<button onclick="orderItem('Sushi Nigiri', 18)">Adicionar ao Carrinho</button>
+		</div>
+		<div class="menu-item">
+			<img src="https://i0.wp.com/querofazersushi.com.br/wp-content/uploads/2020/02/sushi-pelo-mundo.png?resize=640%2C456" alt="Sushi Uramaki">
+			<h3>Sushi Uramaki</h3>
+			<p>Sushi enrolado com arroz por fora e recheio fresco.</p>
+			<button onclick="orderItem('Sushi Uramaki', 25)">Adicionar ao Carrinho</button>
+		</div>
+	</div>
 
-	<section id="burgers">
+	<div id="burgers" class="tab-content">
 		<h2>Burgers</h2>
 		<div class="menu-item">
-			<img src="https://img.freepik.com/fotos-premium/delicioso-hamburguer-suculento-com-costeleta-e-ingredientes-frescos-fast-food-em-um-fundo-escuro-fechado_604214-390.jpg" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 626px; height: 245px; margin: 0px; width: 368px;" alt="Delicioso hambúrguer suculento com costeleta e ingredientes frescos Fast  food em um fundo escuro fechado | Foto Premium" jsname="kn3ccd" aria-hidden="false">
+			<img src="https://img.freepik.com/fotos-premium/delicioso-hamburguer-suculento-com-costeleta-e-ingredientes-frescos-fast-food-em-um-fundo-escuro-fechado_604214-390.jpg" alt="Cheeseburger">
 			<h3>Cheeseburger</h3>
 			<p>Hamburguer suculento com queijo e ingredientes frescos.</p>
-			<button onclick="orderItem('Cheeseburger')">Pedir Agora</button>
+			<button onclick="orderItem('Cheeseburger', 15)">Adicionar ao Carrinho</button>
 		</div>
-		<!-- Adicione mais itens de hambúrguer aqui -->
-	</section>
+		<div class="menu-item">
+			<img src="https://img.freepik.com/fotos-premium/delicioso-hamburguer-suculento-com-costeleta-e-ingredientes-frescos-fast-food-em-um-fundo-escuro-fechado_604214-390.jpg" alt="Bacon Burger">
+			<h3>Bacon Burger</h3>
+			<p>Hamburguer com bacon crocante e queijo cheddar.</p>
+			<button onclick="orderItem('Bacon Burger', 18)">Adicionar ao Carrinho</button>
+		</div>
+		<div class="menu-item">
+			<img src="https://img.freepik.com/fotos-premium/delicioso-hamburguer-suculento-com-costeleta-e-ingredientes-frescos-fast-food-em-um-fundo-escuro-fechado_604214-390.jpg" alt="Veggie Burger">
+			<h3>Veggie Burger</h3>
+			<p>Hamburguer vegetariano com vegetais frescos.</p>
+			<button onclick="orderItem('Veggie Burger', 17)">Adicionar ao Carrinho</button>
+		</div>
+		<div class="menu-item">
+			<img src="https://img.freepik.com/fotos-premium/delicioso-hamburguer-suculento-com-costeleta-e-ingredientes-frescos-fast-food-em-um-fundo-escuro-fechado_604214-390.jpg" alt="BBQ Burger">
+			<h3>BBQ Burger</h3>
+			<p>Hamburguer com molho barbecue e cebolas caramelizadas.</p>
+			<button onclick="orderItem('BBQ Burger', 20)">Adicionar ao Carrinho</button>
+		</div>
+	</div>
 
-	<section id="pizza">
+	<div id="pizza" class="tab-content">
 		<h2>Pizza</h2>
 		<div class="menu-item">
-<img src="https://lirp.cdn-website.com/33406c6e/dms3rep/multi/opt/margherita-7d163fb8-1920w.jpg" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 1280px; height: 245px; margin: 0px; width: 368px;" alt="Margherita: conheça a tradicionalíssima pizza italiana" jsname="kn3ccd" aria-hidden="false">			<h3>Pizza Margherita</h3>
+			<img src="https://lirp.cdn-website.com/33406c6e/dms3rep/multi/opt/margherita-7d163fb8-1920w.jpg" alt="Pizza Margherita">
+			<h3>Pizza Margherita</h3>
 			<p>Pizza clássica com molho de tomate, queijo e manjericão.</p>
-			<button onclick="orderItem('Pizza Margherita')">Pedir Agora</button>
+			<button onclick="orderItem('Pizza Margherita', 25)">Adicionar ao Carrinho</button>
 		</div>
-		<!-- Adicione mais itens de pizza aqui -->
-	</section>
+		<div class="menu-item">
+			<img src="https://lirp.cdn-website.com/33406c6e/dms3rep/multi/opt/margherita-7d163fb8-1920w.jpg" alt="Pizza Pepperoni">
+			<h3>Pizza Pepperoni</h3>
+			<p>Pizza com pepperoni, queijo e molho de tomate.</p>
+			<button onclick="orderItem('Pizza Pepperoni', 28)">Adicionar ao Carrinho</button>
+		</div>
+		<div class="menu-item">
+			<img src="https://lirp.cdn-website.com/33406c6e/dms3rep/multi/opt/margherita-7d163fb8-1920w.jpg" alt="Pizza Quatro Queijos">
+			<h3>Pizza Quatro Queijos</h3>
+			<p>Pizza com uma mistura deliciosa de quatro queijos.</p>
+			<button onclick="orderItem('Pizza Quatro Queijos', 30)">Adicionar ao Carrinho</button>
+		</div>
+		<div class="menu-item">
+			<img src="https://lirp.cdn-website.com/33406c6e/dms3rep/multi/opt/margherita-7d163fb8-1920w.jpg" alt="Pizza Vegetariana">
+			<h3>Pizza Vegetariana</h3>
+			<p>Pizza com vegetais frescos e queijo.</p>
+			<button onclick="orderItem('Pizza Vegetariana', 27)">Adicionar ao Carrinho</button>
+		</div>
+	</div>
+
+	<div id="cart" class="tab-content">
+		<h2>Carrinho</h2>
+		<div id="cart-items">
+			<!-- Itens adicionados ao carrinho aparecerão aqui -->
+		</div>
+		<h3>Total: <span id="total-price">R$ 0,00</span></h3>
+
+		<form id="checkout-form" onsubmit="finalizePurchase(event)">
+			<h3>Finalização da Compra</h3>
+			<label for="name">Nome:</label>
+			<input type="text" id="name" name="name" required>
+
+			<label for="phone">Telefone:</label>
+			<input type="tel" id="phone" name="phone" required>
+
+			<label for="address">Endereço:</label>
+			<input type="text" id="address" name="address" required>
+
+			<label for="email">E-mail:</label>
+			<input type="email" id="email" name="email" required>
+
+			<button type="submit">Finalizar Compra</button>
+		</form>
+	</div>
 
 	<footer>
-		<p>&copy; 2024 Food Delivery. Todos os direitos reservados.</p>
-	</footer>
-
-	<script src="script.js"></script>
-</body>
-
-</html>
