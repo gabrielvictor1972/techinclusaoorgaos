@@ -1,52 +1,63 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Chuu transações</title>
+	<title>Food Delivery</title>
 	<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 	<header>
-		<title>Chuu transações</title>
-		<div class="logo">
-			<img src="https://i.pinimg.com/236x/6d/c3/0f/6dc30f2628ae4079f22a67963b704e85.jpg" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 118px; height: 117px; margin: 0px; width: 120px;" alt="chuu coringa meme" jsname="kn3ccd" aria-hidden="false">
-        </div>
-			<div class="search-bar">
-				<input type="text" placeholder=" Pesquise por orgãos novos!">
-        </div>
-				<div class="user-options">
-					<button class="login-btn">Entrar</button>
-				</div>
+		<h1>Food Delivery</h1>
+		<nav>
+			<a href="#home">Home</a>
+			<a href="#sushi">Sushi</a>
+			<a href="#burgers">Burgers</a>
+			<a href="#pizza">Pizza</a>
+		</nav>
 	</header>
 
-	<section class="hero">
-		<h1>Encontre o melhor da sua cidade</h1>
-		<input type="text" placeholder="Digite seu endereço">
-		<button class="btn-primary">Buscar</button>
+	<section id="home">
+		<h2>Bem-vindo ao Food Delivery!</h2>
+		<p>Escolha entre nossas deliciosas opções de comida.</p>
 	</section>
 
-	<section class="restaurants">
-		<h2>Restaurantes populares</h2>
-		<div class="restaurant-list">
-			<div class="restaurant-item">
-				<img src="https://static.mundoeducacao.uol.com.br/mundoeducacao/2019/09/coracao.jpg" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 700px; height: 157px; margin: 0px; width: 244px;" alt="Coração: função, camadas, cavidades e válvulas - Mundo Educação" jsname="kn3ccd" aria-hidden="false">
-				<h3>Coração vivo</h3>
-				<p>United States, Hillsboro</p>
-			</div>
-			<div class="restaurant-item">
-				<img src="https://www.casadecarnespine.com.br/wp-content/uploads/2023/01/Rim-casa-de-carnes-pine.jpg" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 200px; height: 164px; margin: 0px; width: 368px;" alt="Rim Bovino - Preço/Kg - Casa de Carnes Piné" jsname="kn3ccd" aria-hidden="false">
-				<h3>Restaurante 2</h3>
-				<p>Cozinha Italiana</p>
-			</div>
-			<!-- Adicione mais restaurantes conforme necessário -->
+	<section id="sushi">
+		<h2>Sushi</h2>
+		<div class="menu-item">
+			<img src="https://i0.wp.com/querofazersushi.com.br/wp-content/uploads/2020/02/sushi-pelo-mundo.png?resize=640%2C456" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 640px; height: 262px; margin: 0px; width: 368px;" alt="Sushi pelo mundo: 6 formas inusitadas de comer sushi - Comida Japonesa |  Blog Quero Fazer Sushi" jsname="kn3ccd" aria-hidden="false">
+			<h3>Sushi Maki</h3>
+			<p>Delicioso sushi com peixe fresco e arroz temperado.</p>
+			<button onclick="orderItem('Sushi Maki')">Pedir Agora</button>
 		</div>
+		<!-- Adicione mais itens de sushi aqui -->
+	</section>
+
+	<section id="burgers">
+		<h2>Burgers</h2>
+		<div class="menu-item">
+			<img src="https://img.freepik.com/fotos-premium/delicioso-hamburguer-suculento-com-costeleta-e-ingredientes-frescos-fast-food-em-um-fundo-escuro-fechado_604214-390.jpg" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 626px; height: 245px; margin: 0px; width: 368px;" alt="Delicioso hambúrguer suculento com costeleta e ingredientes frescos Fast  food em um fundo escuro fechado | Foto Premium" jsname="kn3ccd" aria-hidden="false">
+			<h3>Cheeseburger</h3>
+			<p>Hamburguer suculento com queijo e ingredientes frescos.</p>
+			<button onclick="orderItem('Cheeseburger')">Pedir Agora</button>
+		</div>
+		<!-- Adicione mais itens de hambúrguer aqui -->
+	</section>
+
+	<section id="pizza">
+		<h2>Pizza</h2>
+		<div class="menu-item">
+<img src="https://lirp.cdn-website.com/33406c6e/dms3rep/multi/opt/margherita-7d163fb8-1920w.jpg" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 1280px; height: 245px; margin: 0px; width: 368px;" alt="Margherita: conheça a tradicionalíssima pizza italiana" jsname="kn3ccd" aria-hidden="false">			<h3>Pizza Margherita</h3>
+			<p>Pizza clássica com molho de tomate, queijo e manjericão.</p>
+			<button onclick="orderItem('Pizza Margherita')">Pedir Agora</button>
+		</div>
+		<!-- Adicione mais itens de pizza aqui -->
 	</section>
 
 	<footer>
-		<p>&copy; 2024 Clone do iFood - Todos os direitos reservados</p>
+		<p>&copy; 2024 Food Delivery. Todos os direitos reservados.</p>
 	</footer>
 
 	<script src="script.js"></script>
