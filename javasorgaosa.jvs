@@ -1,3 +1,80 @@
-function orderItem(item) {
-  alert('Você pediu: ' + item);
+let cart = [];
+let totalPrice = 0;
+
+function openTab(tabId) {
+  // Esconder todos os conteúdos das abas
+  const tabContents = document.querySelectorAll('.tab-content');
+  tabContents.forEach(content => {
+    content.style.display = 'none';
+  });
+
+  // Remover a classe ativa de todos os botões de aba
+  const tabButtons = document.querySelectorAll('.tab-button');
+  tabButtons.forEach(button => {
+    button.classList.remove('active');
+  });
+
+  // Mostrar o conteúdo da aba selecionada
+  document.getElementById(tabId).style.display = 'block';
+
+  // Adicionar a classe ativa ao botão da aba selecionada
+  const activeButton = document.querySelector(`nav a[onclick="openTab('${tabId}')"]`);
+  activeButton.classList.add('active');
 }
+
+function orderItem(itemName, itemPrice) {
+  // Adicionar o item ao carrinho
+  cart.push({ name: itemName, price: itemPrice });
+  totalPrice += itemPrice;
+
+  // Atualizar o carrinho na aba Carrinho
+  updateCart();
+}
+
+function updateCart() {
+  const cartItemsDiv = document.getElementById('cart-items');
+  cartItemsDiv.innerHTML = ''; // Limpa os itens existentes
+
+  // Exibir os itens do carrinho
+  cart.forEach(item => {
+    const itemDiv = document.createElement('div');
+    itemDiv.textContent = `${item.name} - R$ ${item.price.toFixed(2)}`;
+    cartItemsDiv.appendChild(itemDiv);
+  });
+
+  // Atualizar o total
+  const totalPriceElement = document.getElementById('total-price');
+  totalPriceElement.textContent = `R$ ${totalPrice.toFixed(2)}`;
+}
+
+function finalizePurchase(event) {
+  event.preventDefault(); // Prevenir o comportamento padrão do formulário
+
+  // Obter dados do formulário
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phone').value;
+  const address = document.getElementById('address').value;
+  const email = document.getElementById('email').value;
+
+  // Validar os campos
+  if (!name || !phone || !address || !email) {
+    alert('Todos os campos são obrigatórios.');
+    return;
+  }
+
+  // Simular a finalização da compra (Você pode enviar esses dados para o servidor)
+  alert(`Compra finalizada!\n\nNome: ${name}\nTelefone: ${phone}\nEndereço: ${address}\nE-mail: ${email}\nTotal: R$ ${totalPrice.toFixed(2)}`);
+
+  // Limpar o carrinho
+  cart = [];
+  totalPrice = 0;
+  updateCart();
+
+  // Opcional: Redefinir o formulário
+  document.getElementById('checkout-form').reset();
+}
+
+// Inicializar a aba ativa como Home
+document.addEventListener('DOMContentLoaded', () => {
+  openTab('home');
+});
