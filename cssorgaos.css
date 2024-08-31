@@ -1,106 +1,63 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #c90025;
-    color: white;
-    padding: 10px 20px;
+  background: #ff6600;
+  color: #fff;
+  padding: 1em 0;
+  text-align: center;
 }
 
-{<img src="https://i.pinimg.com/236x/6d/c3/0f/6dc30f2628ae4079f22a67963b704e85.jpg" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 236px; height: 235px; margin: 0px; width: 236px;" alt="chuu coringa meme" jsname="kn3ccd" aria-hidden="false">
-    width: 10px;
+header h1 {
+  margin: 0;
 }
 
-.search-bar input {
-    padding: 8px;
-    width: 300px;
-    border-radius: 20px;
-    border: none;
-    outline: none;
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1em;
 }
 
-.user-options .login-btn {
-    background-color: white;
-    color: #c90025;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
+section {
+  padding: 2em;
+  text-align: center;
 }
 
-.hero {
-    background: url('images/hero-bg.jpg') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
+.menu-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 1em auto;
+  padding: 1em;
+  width: 80%;
+  max-width: 400px;
 }
 
-.hero h1 {
-    margin-bottom: 20px;
-    font-size: 2.5rem;
+.menu-item img {
+  width: 100%;
+  border-radius: 8px;
 }
 
-.hero input {
-    padding: 10px;
-    width: 60%;
-    max-width: 400px;
-    border-radius: 20px;
-    border: none;
-    margin-bottom: 20px;
-    outline: none;
+button {
+  background: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
 }
 
-.btn-primary {
-    padding: 10px 20px;
-    background-color: #c90025;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-.restaurants {
-    padding: 20px;
-}
-
-.restaurants h2 {
-    margin-bottom: 20px;
-    font-size: 1.8rem;
-}
-
-.restaurant-list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.restaurant-item {
-    width: 200px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.restaurant-item img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
+button:hover {
+  background: #e65c00;
 }
 
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+  background: #333;
+  color: #fff;
+  padding: 1em 0;
+  text-align: center;
 }
